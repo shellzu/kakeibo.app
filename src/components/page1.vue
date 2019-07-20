@@ -1,10 +1,9 @@
 <template>
   <div id="app">
     <menu1></menu1>
-    <div>
       <h2>新規入力</h2>
-    </div>
     <form>
+      <div align="center">
       <div class="date_picker">
         <label>日付</label>
         <datepicker :format="DatePickerFormat" v-model="date" placeholder="日付を選択"></datepicker>
@@ -25,8 +24,9 @@
         <textarea v-model="memo" placeholder="給料..食費..."></textarea>
       </div>
       <p>
-        <button v-on:click="entry()">登録</button>
+        <addbutton v-on:addList="entry"></addbutton>
       </p>
+      </div>
     </form>
     <div>
       <h2>収支一覧</h2>
@@ -67,12 +67,14 @@
 import Datepicker from 'vuejs-datepicker'
 import moment from 'moment'
 import menu1 from './menu1'
+import addbutton from './addbutton'
 
 export default {
   name: 'app',
   components: {
     Datepicker,
-    menu1
+    menu1,
+    addbutton
   },
   data: function () {
     return {
