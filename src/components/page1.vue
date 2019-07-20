@@ -111,13 +111,13 @@ export default {
     }
   },
   mounted () {
-    if(localStorage.wallet) this.wallet = localStorage.wallet
+    if (localStorage.wallet) this.wallet = localStorage.wallet
   },
   watch: {
-    wallet(newWallet) {
+    wallet (newWallet) {
       localStorage.wallet = newWallet
+    }
   }
-}
 }
 </script>
 
