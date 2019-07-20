@@ -1,33 +1,9 @@
 <template>
   <div id="app">
     <menu1></menu1>
-    <div>
       <h2>新規入力</h2>
-    </div>
-    <form>
-      <div class="date_picker">
-        <label>日付</label>
-        <datepicker :format="DatePickerFormat" v-model="date" placeholder="日付を選択"></datepicker>
-      </div>
-      <div class="text_money">
-        <label>金額</label>
-        <input type="number" v-model.number="money" placeholder="￥" />
-      </div>
-      <div class="radio_select">
-        <p>収支選択</p>
-        <input type="radio" id="income" value="収入" v-model="mode" />
-        <label for="income">収入</label>
-        <input type="radio" id="expense" value="支出" v-model="mode" />
-        <label for="expense">支出</label>
-      </div>
-      <div class="textarea_memo">
-        <label>概要</label>
-        <textarea v-model="memo" placeholder="給料..食費..."></textarea>
-      </div>
-      <p>
-        <button v-on:click="entry()">登録</button>
-      </p>
-    </form>
+    <form1></form1>
+        <addbutton v-on:addList="entry"></addbutton>
     <div>
       <h2>収支一覧</h2>
     </div>
@@ -50,7 +26,7 @@
           <td>{{customformat(passbook.date)}}</td>
           <td>{{passbook.memo}}</td>
           <td>
-            <button v-on:click="deletePassbook(passbook)">削除</button>
+            <deletebutton v-on:deleteList="deletePassbook(passbook)"></deletebutton>
           </td>
         </tr>
       </tbody>
@@ -60,6 +36,7 @@
     <div>
     My name is <input v-model="wallet">
     </div>
+    <addform></addform>
   </div>
 </template>
 
@@ -67,12 +44,20 @@
 import Datepicker from 'vuejs-datepicker'
 import moment from 'moment'
 import menu1 from './menu1'
+import addbutton from './addbutton'
+import deletebutton from './deletebutton'
+import form1 from './form1'
+import addform from './addform'
 
 export default {
   name: 'app',
   components: {
     Datepicker,
-    menu1
+    menu1,
+    addbutton,
+    deletebutton,
+    form1,
+    addform
   },
   data: function () {
     return {
