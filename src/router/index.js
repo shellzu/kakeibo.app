@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import page1 from '@/components/page1'
-import page3 from '@/components/page3'
+import BudgetListPage from '@/components/BudgetListPage'
+import SavingsPage from '@/components/SavingsPage'
 
 Vue.use(Router)
 
@@ -10,11 +10,11 @@ export default new Router({
   routes: [
     {
       path: '/',
-      component: page1
+      component: BudgetListPage
     },
     {
-      path: '/page3',
-      component: page3
+      path: '/savingsPage',
+      component: SavingsPage
     }
   ]
 })
