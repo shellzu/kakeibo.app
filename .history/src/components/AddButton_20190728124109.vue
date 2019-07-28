@@ -1,13 +1,16 @@
 <template>
 <div id="app">
-  <button @click="emitChild">追加</button>
+  <button v-on:click="emitParent">追加</button>
 </div>
 </template>
 <script>
 export default {
   name: 'app',
   methods: {
-    emitChild: function () {
+    add: function () {
+      alert('クリック')
+    },
+    emitParent () {
       this.$emit('add-list')
     }
   }

@@ -4,6 +4,7 @@
     <br>
     <br>
     <p>画面遷移できたね！</p>
+    
   </div>
 </template>
 <script>
@@ -18,5 +19,6 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+@import './page.css';
 </style>

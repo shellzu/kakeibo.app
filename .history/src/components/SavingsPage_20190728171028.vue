@@ -1,3 +1,4 @@
+<!-- 画面遷移練習用ページ --> 
 <template>
   <div>
     <HeaderMenu></HeaderMenu>

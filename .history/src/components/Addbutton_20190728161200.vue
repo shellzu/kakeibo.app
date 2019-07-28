@@ -7,6 +7,9 @@
 export default {
   name: 'app',
   methods: {
+    add: function () {
+      alert('クリック')
+    },
     emitChild: function () {
       this.$emit('add-list')
     }

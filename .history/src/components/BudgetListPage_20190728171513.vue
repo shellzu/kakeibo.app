@@ -153,10 +153,6 @@ button:active {
   box-shadow: none;
   text-shadow: none;
 }
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-}
 /*--------------------------------------
   テキスト 金額
   ---------------------------------------*/

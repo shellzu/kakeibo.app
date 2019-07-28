@@ -18,5 +18,6 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+@import './page.css';
 </style>

@@ -136,6 +136,12 @@ export default {
 .th.td {
   padding: 0.5em 3em 0.5em 3em;
 }
+.table_savings {
+  padding: 10px 0;
+  background-color: #eee;
+  border: 1px solid white;
+  width: 80%;
+}
 button {
   position: relative;
   display: inline-block;
@@ -152,6 +158,22 @@ button:active {
   border: solid 1px #03a9f4;
   box-shadow: none;
   text-shadow: none;
+}
+.cp_link {
+  display: inline-block;
+  padding: 0.1em 0.3em;
+  transition: all 0.3s;
+  color: gray;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+.cp_link:visited {
+  color: #777777;
+  text-decoration: none;
+}
+.cp_link:hover {
+  color: #fff;
+  background-color: #00bcd4;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

@@ -79,7 +79,7 @@ export default {
     AddButton,
     BudgetDeleteButton
   },
-  data: function () {
+  data: function() {
     return {
       passbooks: [
         { id: 0, money: 100000, mode: '収入', date: '2019-06-27', memo: '給料' }
@@ -94,7 +94,7 @@ export default {
     }
   },
   methods: {
-    entry: function () {
+    entry: function() {
       this.passbooks.push({
         money: this.money,
         mode: this.mode,
@@ -107,19 +107,19 @@ export default {
         this.diff = this.diff - Number(this.money)
       }
     },
-    deletePassbook: function (passbook) {
+    deletePassbook: function(passbook) {
       var index = this.passbooks.indexOf(passbook)
       this.passbooks.splice(index, 1)
     },
-    customformat: function (value) {
+    customformat: function(value) {
       return moment(value).format('YYYY-MM-DD')
     }
   },
-  mounted () {
+  mounted() {
     if (localStorage.wallet) this.wallet = localStorage.wallet
   },
   watch: {
-    wallet (newWallet) {
+    wallet(newWallet) {
       localStorage.wallet = newWallet
     }
   }
@@ -135,6 +135,26 @@ export default {
 }
 .th.td {
   padding: 0.5em 3em 0.5em 3em;
+}
+.table_savings {
+  padding: 10px 0;
+  background-color: #eee;
+  border: 1px solid white;
+  width: 80%;
+}
+/*--------------------------------------
+  貯金一覧
+  ---------------------------------------*/
+.savings li {
+  background: whitesmoke;
+  margin-bottom: 50px;
+  height: 200px;
+  border-radius: 20px;
+}
+.savings p {
+  font-size: 1em;
+  text-align: left;
+  text-align: center;
 }
 button {
   position: relative;
@@ -152,6 +172,25 @@ button:active {
   border: solid 1px #03a9f4;
   box-shadow: none;
   text-shadow: none;
+}
+.saving_link {
+  font-size: 1.5em;
+}
+.cp_link {
+  display: inline-block;
+  padding: 0.1em 0.3em;
+  transition: all 0.3s;
+  color: gray;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+.cp_link:visited {
+  color: #777777;
+  text-decoration: none;
+}
+.cp_link:hover {
+  color: #fff;
+  background-color: #00bcd4;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

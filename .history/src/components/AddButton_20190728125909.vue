@@ -1,13 +1,16 @@
 <template>
 <div id="app">
-  <button @click="emitChild">追加</button>
+  <button @click="emitEventOne">Event 1</button>
 </div>
 </template>
 <script>
 export default {
   name: 'app',
   methods: {
-    emitChild: function () {
+    add: function () {
+      alert('クリック')
+    },
+    emitEventOne () {
       this.$emit('add-list')
     }
   }
